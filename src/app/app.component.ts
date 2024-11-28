@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+const ACTUALIDAD = new Date();
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Gimnasio4V';
+  actividades = [
+    {
+      fecha: ACTUALIDAD.toLocaleDateString() + " " + ACTUALIDAD.toLocaleTimeString(),
+      lugar: "Aula01",
+      monitor: "Miguel Goyena",
+      tipo: "BodyPump"
+    },
+    {
+      fecha: ACTUALIDAD.toLocaleDateString() + " " + ACTUALIDAD.toLocaleTimeString(),
+      lugar: "Aula02",
+      monitor: "Miguel Goyena",
+      tipo: "Pilates"
+    }
+  ]
 }
