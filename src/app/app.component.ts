@@ -1,25 +1,14 @@
 import { Component } from '@angular/core';
-const ACTUALIDAD = new Date();
+import { CommonModule } from '@angular/common';
+import { ActividadesComponent } from "./actividades/actividades/actividades.component";
+import { NavbarComponent } from "./navbar/navbar/navbar.component";
+
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [ActividadesComponent, NavbarComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Gimnasio4V';
-  actividades = [
-    {
-      fecha: ACTUALIDAD.toLocaleDateString() + " " + ACTUALIDAD.toLocaleTimeString(),
-      lugar: "Aula01",
-      monitor: "Miguel Goyena",
-      tipo: "BodyPump"
-    },
-    {
-      fecha: ACTUALIDAD.toLocaleDateString() + " " + ACTUALIDAD.toLocaleTimeString(),
-      lugar: "Aula02",
-      monitor: "Miguel Goyena",
-      tipo: "Pilates"
-    }
-  ]
 }

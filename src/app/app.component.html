@@ -1,26 +1,6 @@
 <div class="container-fluid">
   <div class="container text-center">
-    <h1 class="h1">angular-hola-clase!</h1>
-    <h1 class="h1">Actividades GYM 4V</h1>
+    <app-navbar />
   </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Lugar</th>
-        <th>Monitor</th>
-        <th>Tipo</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (actividad of actividades; track $index) {
-      <tr>
-        <td>{{actividad.fecha}}</td>
-        <td>{{actividad.lugar}}</td>
-        <td>{{actividad.monitor}}</td>
-        <td>{{actividad.tipo}}</td>
-      </tr>
-      }
-    </tbody>
-  </table>
+  <app-actividades/>
 </div>
